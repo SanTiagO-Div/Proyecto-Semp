@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mis Pacientes - SEMP</title>
+    <link rel="icon" href="../Assets/Logo.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../CSS/Mis_pacientes.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="shell">
+            <div class="brand">
+                <img src="../Assets/Logo.png" alt="SEMP" />
+                <h1>SEMP | Gestión de Pacientes</h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="shell">
+        <div class="page-title">
+            <h2>Mis Pacientes</h2>
+        </div>
+
+        <!-- Formulario en una sola fila con 6 columnas -->
+        <section class="table-card">
+            <form class="p-3" name="Formulario_busqueda" id="Formulario_busqueda" method="post" action="#">
+                <!-- Fila de búsqueda por doctor dentro del formulario -->
+                <div class="row g-3 align-items-end mb-2">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group w-100">
+                            <label for="Select_doc" class="form-label">Doctor</label>
+                            <select id="Select_doc" name="Select_doc" class="form-control">
+                                <option value="Dra. Laura Gómez">Dra. Laura Gómez</option>
+                                <option value="Dr. Andrés Castaño">Dr. Andrés Castaño</option>
+                                <option value="Dr. David Ruiz">Dr. David Ruiz</option>
+                                <option value="Dr. Leonardo Lopez">Dr. Leonardo Lopez</option>
+                                <option value="Dra. Sofía Mejía">Dra. Sofía Mejía</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <button id="btn_filtrar" name="btn_filtrar" type="submit"
+                            class="btn btn-primary w-100">Filtrar</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <section class="table-card mt-3">
+            <form class="p-3" name="Formulario_fecha" id="Formulario_fecha" method="post" action="#">
+                <div class="row g-3 align-items-end mb-2">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group w-100">
+                            <label for="fecha" class="form-label">Fecha</label>
+                            <input type="date" id="Fecha" name="Fecha" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <button id="Editar_fecha" name="Editar_fecha" type="submit" class="btn btn-primary w-100">Editar</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <section class="mt-4 table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Documento</th>
+                        <th>Especialidad</th>
+                        <th>Sede</th>
+                        <th>Fecha</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="Tabla_pacientes" ></tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer class="shell">
+        © <span id="year"></span> SEMP. Todos los derechos reservados.
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous">
+        </script>
+    <script src="../JS/Mis_pacientes.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

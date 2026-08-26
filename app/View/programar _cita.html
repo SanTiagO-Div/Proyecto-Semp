@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Agendar cita | Semp</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../CSS/programar_cita.css" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg" id="Barra" name="Barra">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="Index.html">
+                <img class="logo me-2" src="../Assets/Logo.png" alt="Semp" width="48" height="48" />
+                <span class="fw-semibold">Semp</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link foc_hover" href="Sedes.html">Nuestras sedes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link foc_hover" href="Doctores.html">Nuestros Doctores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link foc_hover" href="Index.html#acordeon">Preguntas Frecuentes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link foc_hover" href="#contacto">Contacto</a>
+                    </li>
+                    <div>
+                        <li class="nav-item">
+                            <a class="nav-link sp_login" href="../View/Login.html">Login</a>
+                        </li>
+                    </div>
+                    <li>
+                        <a class="nav-link btn btn-info color Sombra" href="#">Mi perfil</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="py-5 hero-agenda border-bottom">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-12 col-lg-6">
+                    <h1 class="display-6 fw-bold mb-3">Agenda tu cita</h1>
+                    <p class="lead mb-0">El primer paso para una mejor salud oral comienza aquí. Selecciona la sede,
+                        profesional y el horario que más se ajuste a ti.</p>
+                </div>
+                <div class="col-12 col-lg-6 text-center">
+                    <img src="../Assets/imagen texto principal.jpg" alt="Atención Semp" class="img-fluid"
+                        style="max-width: 420px;" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario de agendación -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10">
+                    <div class="card card-form Sombra">
+                        <div class="card-body p-4 p-md-5">
+                            <h2 class="h4 mb-4">Datos de la cita</h2>
+                            <form id="form-agendar" novalidate>
+                                <div class="row g-3">
+                                    <div class="col-12 col-md-6">
+                                        <label for="Nombre" class="form-label required">Nombre</label>
+                                        <input type="text" name="Nombre" id="Nombre" class="form-control" placeholder="Tu nombre "
+                                            required>
+                                        <div class="invalid-feedback">Por favor ingresa tu nombre.</div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label for="Apellido" class="form-label required">Apellido</label>
+                                        <input type="text" name="Apellido" id="Apellido" class="form-control" placeholder="Tu apellido"
+                                            required>
+                                        <div class="invalid-feedback">Por favor ingresa tu apellido.</div>
+                                    </div>
+                                        <div class="col-12 col-md-6">
+                                            <label for="Documento" class="form-label required">Documento</label>
+                                            <input type="email" name="Documento" id="Documento" class="form-control"
+                                                placeholder="Tu documento" required>
+                                            <div class="invalid-feedback">Por favor ingresa tu documento.</div>
+                                        </div>
+                                    </div>
+                                    <div class="row g-3">
+                                        <div class="col-12 col-md-6">
+                                            <label for="sede" class="form-label required">Sede</label>
+                                            <select name="Sede" id="sede" class="form-select" required>
+                                                <option value="" selected disabled>Selecciona una sede</option>
+                                                <option>Pereira-Centro</option>
+                                                <option>Pereira-Pinares</option>
+                                                <option>manizales-Chipre</option>
+                                            </select>
+                                            <div class="invalid-feedback">Selecciona una sede.</div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6">
+                                            <label for="especialidad" class="form-label required">Especialidad</label>
+                                            <select name="Especialidad" id="especialidad" class="form-select" required>
+                                                <option value="" selected disabled>Selecciona una especialidad
+                                                </option>
+                                                <option>Odontología general</option>
+                                                <option>Ortodoncia</option>
+                                                <option>Endodoncia</option>
+                                                <option>Estética dental</option>
+                                            </select>
+                                            <div class="invalid-feedback">Selecciona una especialidad.</div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6">
+                                            <label for="doctor" class="form-label required">Seleccione un doctor</label>
+                                            <select name="Doctor" id="Doctor" class="form-select" required>
+                                                <option value="" selected disabled>Seleccione un doctor
+                                                </option>
+                                                <option>Dra. Laura Gómez</option>
+                                                <option>Dr. Andrés Castaño</option>
+                                                <option>Dr. David Ruiz</option>
+                                                <option>Dr. Leonardo Lopez</option>
+                                                <option>Dra. Sofía Mejía</option>
+                                            </select>
+                                            <div class="invalid-feedback">Selecciona un doctor.</div>
+                                        </div>
+
+                                        <div class="col-12 col-md-3">
+                                            <label for="fecha" class="form-label required">Fecha</label>
+                                            <input type="date" name="Fecha" id="fecha" class="form-control" required>
+                                            <div class="invalid-feedback">Selecciona una fecha válida.</div>
+                                        </div>
+
+                                        <div class="col-12 d-flex gap-3 mt-3">
+                                            <button type="submit" class="btn btn-info color Sombra">Confirmar
+                                                cita</button>
+                                        </div>
+                                    </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Info adicional -->
+                    <div class="row g-4 mt-1">
+                        <div class="col-12 col-md-4">
+                            <div class="p-3 bg-light rounded-3 h-100 border">
+                                <h6 class="mb-1">Recordatorios</h6>
+                                <p class="mb-0 text-muted">Te enviaremos recordatorios por correo antes de tu cita.</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="p-3 bg-light rounded-3 h-100 border">
+                                <h6 class="mb-1">Política de cancelación</h6>
+                                <p class="mb-0 text-muted">Puedes reprogramar hasta 24 horas antes sin costo.</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="p-3 bg-light rounded-3 h-100 border">
+                                <h6 class="mb-1">Llegada</h6>
+                                <p class="mb-0 text-muted">Llega 10 minutos antes para completar tu registro.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contacto -->
+    <footer id="contacto" class="pt-5 pb-4 bg-dark text-light">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-12 col-md-6">
+                    <h5 class="mb-3">Semp</h5>
+                    <p class="text-white-50 mb-0">Cuidamos tu sonrisa con tecnología y calidez humana.</p>
+                </div>
+                <div class="col-12 col-md-6 text-md-end">
+                    <div class="small text-white-50">Contacto</div>
+                    <div class="small">Tel: (000) 123-4567</div>
+                    <div class="small">Email: contacto@semp.com</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <script src="../../app/JS/Registro_cita.js"></script>
+</body>
+
+</html>

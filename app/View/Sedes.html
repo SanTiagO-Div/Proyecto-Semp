@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sedes | Semp</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../CSS/Index.css" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg" id="Barra" name="Barra">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="./Index.html">
+                <img class="logo me-2" src="../Assets/Logo.png" alt="Semp" width="48" height="48" />
+                <span class="fw-semibold">Semp</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link foc_hover " aria-current="page" href="./Index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link foc_hover" href="./Doctores.html">Nuestros Doctores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link foc_hover" href="./Index.html#acordeon">Preguntas Frecuentes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link foc_hover" href="./Index.html#contacto">Contacto</a>
+                    </li>
+                    <div>
+                        <li class="nav-item">
+                            <a class="nav-link sp_login " href="../View/Login.html">Login</a>
+                        </li>
+                    </div>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="py-5 bg-light border-bottom">
+        <div class="container text-center">
+            <h1 class="fw-bold">Nuestras sedes</h1>
+            <p class="text-muted mb-0">Encuéntranos en Pereira y Manizales</p>
+        </div>
+    </header>
+
+    <main class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Sede 1 Pereira -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="../Assets/Sede1.png" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title mb-1">Sede Pereira - Centro</h5>
+                            <span class="badge text-bg-info">Pereira</span>
+                            <p class="card-text mt-3 text-muted">Ubicada en el corazón de la ciudad, ideal para citas rápidas y atención integral. Fácil acceso a transporte público.</p>
+                            <ul class="list-unstyled small text-muted mb-0">
+                                <li>Dirección: Cra 7 # 18-25, Centro</li>
+                                <li>Horarios: Lun-Vie 8:00am - 6:00pm | Sáb 8:00am - 1:00pm</li>
+                                <li>Servicios: General, Estética, Ortodoncia</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sede 2 Pereira -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="../Assets/Sede2.png" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title mb-1">Sede Pereira - Pinares</h5>
+                            <span class="badge text-bg-info">Pereira</span>
+                            <p class="card-text mt-3 text-muted">Espacio moderno y tranquilo, pensado para procedimientos especializados en un ambiente cómodo.</p>
+                            <ul class="list-unstyled small text-muted mb-0">
+                                <li>Dirección: Av. Circunvalar # 12-34, Pinares</li>
+                                <li>Horarios: Lun-Vie 9:00am - 7:00pm | Sáb 9:00am - 2:00pm</li>
+                                <li>Servicios: Endodoncia, Implantes, Rehabilitación</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sede 3 Manizales -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="../Assets/Sede3.png" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title mb-1">Sede Manizales - Chipre</h5>
+                            <span class="badge text-bg-info">Manizales</span>
+                            <p class="card-text mt-3 text-muted">Con vista a la ciudad, esta sede ofrece atención integral con equipos de última tecnología.</p>
+                            <ul class="list-unstyled small text-muted mb-0">
+                                <li>Dirección: Calle 12 # 6-45, Chipre</li>
+                                <li>Horarios: Lun-Vie 8:00am - 6:00pm | Sáb 8:00am - 12:00m</li>
+                                <li>Servicios: General, Odontopediatría, Estética</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- CTA -->
+    <section class="py-5 text-center">
+        <div class="container">
+            <h3 class="fw-semibold mb-3">¿Quieres agendar en alguna sede?</h3>
+            <a href="./Index.html#contacto" class="btn btn-info color Sombra btn-lg">Contactar ahora</a>
+        </div>
+    </section>
+
+    <!-- Footer / Contacto -->
+    <footer id="contacto" class="pt-5 pb-4 bg-dark text-light">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-12 col-md-6">
+                    <h5 class="mb-3">Semp</h5>
+                    <p class="text-white-50 mb-0">Cuidamos tu sonrisa con tecnología y calidez humana.</p>
+                </div>
+                <div class="col-12 col-md-6 text-md-end">
+                    <div class="small text-white-50">Contacto</div>
+                    <div class="small">Tel: (000) 123-4567</div>
+                    <div class="small">Email: contacto@semp.com</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
